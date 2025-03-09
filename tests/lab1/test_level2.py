@@ -11,7 +11,7 @@ class TestLevel2(unittest.TestCase):
     def test_solution_2(self):
         element, position = solution([15, 7, 22, 9, 36, 2, 42, 18], 2)
         self.assertEqual(element, 36)
-        self.assertEqual(position, 3)
+        self.assertEqual(position, 4)
 
     def test_solution_3(self):
         element, position = solution([15, 7, 22, 9, 36, 2, 42, 18], 3)
