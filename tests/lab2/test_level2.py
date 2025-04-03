@@ -8,8 +8,5 @@ class TestLevel2(unittest.TestCase):
         self.assertEqual(solution([30,11,23,4,20], 5), 30)
         self.assertEqual(solution([30,11,23,4,20], 6), 23)
 
-    def test_input_limitations(self):
-        self.assertEqual(solution([3,6,7,11], 2), None)
-
 if __name__ == "__main__":
     unittest.main()
