@@ -1,5 +1,5 @@
 import unittest
-from lab2.level2 import solution
+from src.lab2.level2 import solution
 
 class TestLevel2(unittest.TestCase):
 
