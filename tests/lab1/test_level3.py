@@ -5,7 +5,7 @@ class TestLevel3(unittest.TestCase):
 
     def test_with_peak_subsequence(self):
         input_sequence = [1, 3, 5, 4, 2, 8, 3, 7]
-        expected_subsequence_lenght = 5 # [1, 3, 5, 4, 2]
+        expected_subsequence_lenght = 5  # [1, 3, 5, 4, 2]
         self.assertEqual(solution(input_sequence), expected_subsequence_lenght)
 
     def test_with_asc_sorted_sequence(self):
@@ -24,19 +24,20 @@ class TestLevel3(unittest.TestCase):
         self.assertEqual(solution(input_sequence), expected_subsequence_lenght)
 
     def test_with_no_peak_subsequence(self):
-        input_sequence =  [1, 3, 5, 5, 2, 3, 3, 7]
+        input_sequence = [1, 3, 5, 5, 2, 3, 3, 7]
         expected_subsequence_lenght = 0
         self.assertEqual(solution(input_sequence), expected_subsequence_lenght)
 
     def test_with_negative_peak_subsequence(self):
-        input_sequence =  [-1, -3, -5, -4, -2, 0]
+        input_sequence = [-1, -3, -5, -4, -2, 0]
         expected_subsequence_lenght = 0
         self.assertEqual(solution(input_sequence), expected_subsequence_lenght)
 
     def test_with_three_peak_subsequences_return_longest(self):
-        input_sequence =  [1, 8, 3, 7, 2, 4, 5, 9, 7, 6, 4, 9]
+        input_sequence = [1, 8, 3, 7, 2, 4, 5, 9, 7, 6, 4, 9]
         expected_subsequence_lenght = 7
         self.assertEqual(solution(input_sequence), expected_subsequence_lenght)
+
 
 if __name__ == "__main__":
     unittest.main()
