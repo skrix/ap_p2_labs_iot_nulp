@@ -1,6 +1,7 @@
 import unittest
 from src.lab4.level_1.queue import Queue
 
+
 class TestLevel1(unittest.TestCase):
 
     def setUp(self):
@@ -59,7 +60,6 @@ class TestLevel1(unittest.TestCase):
         self.assertEqual(node_3.prev, node_2)
         self.assertEqual(node_3.next, None)
 
-
     def test_status(self):
         node_1 = self.queue.enqueue(value='node_1', priority=5)
         node_2 = self.queue.enqueue(value='node_2', priority=1)
@@ -74,8 +74,6 @@ class TestLevel1(unittest.TestCase):
         ]
 
         self.assertEqual(self.queue.status(), expected_result)
-
-
 
 
 if __name__ == "__main__":
