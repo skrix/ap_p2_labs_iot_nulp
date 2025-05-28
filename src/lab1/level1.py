@@ -8,6 +8,7 @@ def merge_sort(arr):
 
     return merge_parts(left_half, right_half)
 
+
 def merge_parts(left, right):
     sorted_merge_result = []
     i, j = 0, 0
@@ -24,6 +25,7 @@ def merge_parts(left, right):
     sorted_merge_result.extend(right[j:])
 
     return sorted_merge_result
+
 
 def solution(nums):
     squared = [x * x for x in nums]

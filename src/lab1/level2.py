@@ -11,6 +11,7 @@ def partition(numbers, selected_number):
 
     return left, middle, right
 
+
 def quickselect(numbers, k):
     selected_number = numbers[k - 1]
     left, middle, right = partition(numbers, selected_number)
@@ -21,6 +22,7 @@ def quickselect(numbers, k):
         return selected_number  # Found
     else:
         return quickselect(right, k - len(left) - len(middle))  # Search right
+
 
 def solution(numbers, k):
     if len(numbers) < k:

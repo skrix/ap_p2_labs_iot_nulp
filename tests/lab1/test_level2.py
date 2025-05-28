@@ -43,5 +43,6 @@ class TestLevel2(unittest.TestCase):
         self.assertEqual(element, 2)
         self.assertEqual(position, 5)
 
+
 if __name__ == "__main__":
     unittest.main()
