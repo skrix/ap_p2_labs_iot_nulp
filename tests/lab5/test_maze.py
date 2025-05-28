@@ -1,7 +1,5 @@
 import unittest
-import tempfile
-import os
-from src.lab5.level_1.maze import Maze
+from src.lab5.level_2.maze import Maze
 
 class TestMaze(unittest.TestCase):
     def setUp(self):
@@ -33,7 +31,7 @@ class TestMaze(unittest.TestCase):
         self.assertEqual(self.maze.matrix, matrix)
 
     def test_setup(self):
-        self.maze.setup(file='tests/lab5/fixtures/input.txt')
+        self.maze._Maze__setup(file='tests/lab5/fixtures/input.txt')
         expected_matrix = [
             [1, 1, 1, 1, 1, 0, 0, 1, 1, 1],
             [0, 1, 1, 1, 1, 1, 0, 1, 0, 1],
@@ -51,6 +49,13 @@ class TestMaze(unittest.TestCase):
         self.assertEqual(self.maze.finish, [7, 5])
         self.assertEqual(self.maze.dimensions, [10, 10])
         self.assertEqual(self.maze.matrix, expected_matrix)
+
+
+    def test_solve(self):
+        result = self.maze.solve(file='tests/lab5/fixtures/input.txt')
+        self.assertEqual(self.maze.start, [0, 0])
+        self.assertEqual(self.maze.finish, [7, 5])
+        self.assertEqual(result, 12)
 
 if __name__ == '__main__':
     unittest.main()
