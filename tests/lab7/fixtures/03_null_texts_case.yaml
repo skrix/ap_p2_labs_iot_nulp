@@ -1,0 +1,9 @@
+UserWithEmptyList: []
+UserWithNullTexts: null
+UserWithNoTextsField:
+UserWithOneEmptyStringText:
+  - ""
+User_OnlyNonStringValues:
+  - 100
+  - false
+  - {"конфіг": "тест", "значення": 42}
