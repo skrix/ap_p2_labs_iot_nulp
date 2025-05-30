@@ -43,7 +43,6 @@ class TestAhoTrie(unittest.TestCase):
 
     def test_build_simple_fail_links(self):
         trie = AhoTrie()
-        # Keywords: "a", "b", "c"
         trie.insert("a")
         trie.insert("b")
         trie.insert("c")
@@ -73,10 +72,8 @@ class TestAhoTrie(unittest.TestCase):
         n_baba = n_bab.children['a']
 
         self.assertEqual(n_ab.fail, n_b)
-        # n_b is node for "b". "b" is not a keyword. n_b.fail is root. root.output is [].
-        # So n_b.output (after build) should be [].
-        self.assertEqual(sorted(n_b.output), []) # Corrected assertion
-        self.assertEqual(sorted(n_a.output), []) # Corrected assertion
+        self.assertEqual(sorted(n_b.output), [])
+        self.assertEqual(sorted(n_a.output), [])
 
         self.assertEqual(sorted(n_ab.output), sorted(["ab"]))
         self.assertEqual(sorted(n_ba.output), sorted(["ba"]))
