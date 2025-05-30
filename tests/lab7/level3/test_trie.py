@@ -1,7 +1,6 @@
 import unittest
 
 from src.lab7.level3.base_task import build_trie
-from src.lab7.level3.trie_node import TrieNode
 from src.lab7.level3.trie import Trie
 
 class TestTrie(unittest.TestCase):
@@ -90,5 +89,5 @@ class TestTrie(unittest.TestCase):
         self.assertTrue(trie_instance.starts_with("appl"))
 
 
-if __name__ == '__main__':
-    unittest.main(argv=['first-arg-is-ignored'], exit=False)
+if __name__ == "__main__":
+    unittest.main()
