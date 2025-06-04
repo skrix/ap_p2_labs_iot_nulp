@@ -28,5 +28,8 @@ class TestMaxFlow(unittest.TestCase):
     def test_case_5(self):
         self._run_test_case("tests/lab8/fixtures/test_roads_5.csv", 0)
 
+    def test_case_5(self):
+        self._run_test_case("tests/lab8/fixtures/test_roads_6.csv", 58)
+
 if __name__ == "__main__":
     unittest.main()
