@@ -1,19 +1,30 @@
 class WordGame:
     def __init__(self, filepath):
         self.filepath = filepath
+        self.max_value = 50
 
     def __read_words(self):
         with open(self.filepath, 'r') as f:
             lines = f.readlines()
+        words_count = int(lines[0])
         words = [line for line in lines[1:]]
-        return words
+        return (words_count, words)
 
     def __cross_letter(self, word, index):
         return word[:index] + word[index+1:]
 
+    def __sort_words(self, words, words_count):
+        weight_map = { word: int(((len(word) * words_count) / self.max_value) * 100) for word in words }
+        result = [None] * words_count * 100
+
+        for word in words:
+            result[weight_map[word]] = word
+
+        return list(filter(None, result))
+
     def result(self):
-        words = self.__read_words()
-        words.sort(key=len)
+        words_count, words = self.__read_words()
+        words = self.__sort_words(words, words_count)
 
         len_map = {}
         max_chain_len = 0
